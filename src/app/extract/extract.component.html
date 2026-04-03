@@ -1,0 +1,31 @@
+<section class="extract" id="extraits" aria-labelledby="extract-label">
+
+  <div class="extract-inner">
+    <p class="extract-label" id="extract-label" aria-hidden="true">Exergues</p>
+
+    <!-- Citation principale -->
+    <div class="extract-quote" aria-live="polite">
+      <span class="quote-mark" aria-hidden="true">"</span>
+      <p class="extract-chapter">{{ extracts[activeIndex].chapter }}</p>
+      <blockquote class="extract-text">
+        {{ extracts[activeIndex].text }}
+      </blockquote>
+      <p class="extract-page">— {{ extracts[activeIndex].page }}</p>
+    </div>
+
+    <!-- Navigation entre les extraits -->
+    <nav class="extract-nav" aria-label="Navigation entre les extraits">
+      @for (extract of extracts; track $index) {
+        <button
+          class="extract-dot"
+          [class.is-active]="activeIndex === $index"
+          (click)="setActive($index)"
+          [attr.aria-label]="extract.chapter"
+          [attr.aria-current]="activeIndex === $index ? 'true' : null">
+        </button>
+      }
+    </nav>
+
+  </div>
+
+</section>

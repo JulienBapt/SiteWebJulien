@@ -1,0 +1,127 @@
+// ─── Section ──────────────────────────────────────────────────────────────────
+
+.extract {
+  background: var(--ink);
+  padding: 6rem 2.5rem;
+}
+
+.extract-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+// ─── Label ────────────────────────────────────────────────────────────────────
+
+.extract-label {
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+// ─── Citation ─────────────────────────────────────────────────────────────────
+
+.extract-quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  min-height: 220px;
+  justify-content: center;
+}
+
+.quote-mark {
+  font-family: var(--serif);
+  font-size: 6rem;
+  color: var(--gold);
+  line-height: 0.5;
+  display: block;
+  opacity: 0.6;
+}
+
+.extract-chapter {
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.extract-text {
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--cream);
+  line-height: 1.75;
+  max-width: 56ch;
+  margin: 0;
+  animation: fade-in 0.4s ease both;
+}
+
+.extract-page {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+// ─── Navigation dots ─────────────────────────────────────────────────────────
+
+.extract-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.extract-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--muted);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.25s ease, transform 0.25s ease;
+
+  &.is-active {
+    background: var(--gold);
+    transform: scale(1.5);
+  }
+
+  &:hover:not(.is-active) {
+    background: var(--cream);
+  }
+}
+
+// ─── Animation ────────────────────────────────────────────────────────────────
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+// ─── Responsive ───────────────────────────────────────────────────────────────
+
+@media (max-width: 720px) {
+  .extract {
+    padding: 4rem 1.5rem;
+  }
+
+  .extract-text {
+    font-size: 1.25rem;
+  }
+
+  .quote-mark {
+    font-size: 4rem;
+  }
+}

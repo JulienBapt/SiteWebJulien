@@ -1,0 +1,66 @@
+<section class="gallery" id="photos" aria-labelledby="gallery-label">
+
+  <div class="gallery-inner">
+    <p class="section-label" id="gallery-label" aria-hidden="true">Galerie</p>
+
+    <div class="gallery-grid" role="list">
+      @for (photo of photos; track photo.src; let i = $index) {
+        <article
+          class="photo-card"
+          role="listitem"
+          (click)="openLightbox(i)"
+          (keydown.enter)="openLightbox(i)"
+          (keydown.space)="openLightbox(i)"
+          tabindex="0"
+          [attr.aria-label]="'Ouvrir : ' + photo.caption + ' ' + photo.year">
+          <img
+            [src]="photo.src"
+            [alt]="photo.alt"
+            loading="lazy"
+            class="photo-img" />
+          <div class="photo-overlay" aria-hidden="true">
+            <div class="photo-caption">
+              <p class="photo-caption-title">{{ photo.caption }}</p>
+              <p class="photo-caption-year">{{ photo.year }}</p>
+            </div>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+
+</section>
+
+<!-- Lightbox -->
+@if (lightboxOpen) {
+  <div
+    class="lightbox"
+    role="dialog"
+    aria-modal="true"
+    [attr.aria-label]="photos[lightboxIndex].caption"
+    (click)="closeLightbox()">
+
+    <div class="lightbox-content" (click)="$event.stopPropagation()">
+      <button class="lightbox-close" (click)="closeLightbox()" aria-label="Fermer">✕</button>
+
+      <img
+        [src]="photos[lightboxIndex].src"
+        [alt]="photos[lightboxIndex].alt"
+        class="lightbox-img" />
+
+      <div class="lightbox-caption">
+        <p class="lightbox-caption-title">{{ photos[lightboxIndex].caption }}</p>
+        <p class="lightbox-caption-year">{{ photos[lightboxIndex].year }}</p>
+      </div>
+
+      <div class="lightbox-nav" aria-label="Navigation photos">
+        <button class="lightbox-btn" (click)="prevPhoto()" aria-label="Photo précédente">←</button>
+        <span class="lightbox-counter" aria-live="polite">
+          {{ lightboxIndex + 1 }} / {{ photos.length }}
+        </span>
+        <button class="lightbox-btn" (click)="nextPhoto()" aria-label="Photo suivante">→</button>
+      </div>
+    </div>
+
+  </div>
+}

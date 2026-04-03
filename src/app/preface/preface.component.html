@@ -1,0 +1,26 @@
+<section class="preface" id="preface" aria-labelledby="preface-heading">
+
+  <div class="preface-inner">
+    <p class="section-label" aria-hidden="true">Préface</p>
+
+    <div class="preface-grid">
+
+      <div class="preface-left">
+        <h2 class="preface-heading" id="preface-heading">{{ heading }}</h2>
+        <div class="preface-ornament" aria-hidden="true">
+          <span class="ornament-line"></span>
+          <span class="ornament-diamond">◆</span>
+          <span class="ornament-line"></span>
+        </div>
+      </div>
+
+      <div class="preface-right">
+        @for (p of paragraphs; track $index) {
+          <p class="preface-body">{{ p }}</p>
+        }
+      </div>
+
+    </div>
+  </div>
+
+</section>

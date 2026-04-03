@@ -1,0 +1,115 @@
+// ─── Section ──────────────────────────────────────────────────────────────────
+
+.preface {
+  padding: 5rem 2.5rem;
+  border-bottom: 0.5px solid var(--warm);
+}
+
+.preface-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+// ─── Label ────────────────────────────────────────────────────────────────────
+
+.section-label {
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 2.5rem;
+}
+
+// ─── Grille ───────────────────────────────────────────────────────────────────
+
+.preface-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+// ─── Colonne gauche ───────────────────────────────────────────────────────────
+
+.preface-left {
+  position: sticky;
+  top: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.preface-heading {
+  font-family: var(--serif);
+  font-size: 2.4rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.preface-ornament {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ornament-line {
+  display: block;
+  flex: 1;
+  height: 0.5px;
+  background: var(--gold);
+  max-width: 48px;
+}
+
+.ornament-diamond {
+  font-size: 0.5rem;
+  color: var(--gold);
+  line-height: 1;
+}
+
+// ─── Colonne droite ───────────────────────────────────────────────────────────
+
+.preface-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 0.4rem;
+}
+
+.preface-body {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.95;
+  color: var(--muted);
+  white-space: break-spaces;
+
+  &:first-child {
+    font-size: 1.2rem;
+    color: var(--ink);
+  }
+}
+
+// ─── Responsive ───────────────────────────────────────────────────────────────
+
+@media (max-width: 720px) {
+  .preface {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .preface-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .preface-left {
+    position: static;
+  }
+
+  .preface-heading {
+    font-size: 1.9rem;
+  }
+}

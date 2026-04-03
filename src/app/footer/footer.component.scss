@@ -1,0 +1,93 @@
+// ─── Footer ───────────────────────────────────────────────────────────────────
+
+.footer {
+  background: var(--ink);
+  padding: 3rem 2.5rem;
+}
+
+.footer-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+// ─── Marque ───────────────────────────────────────────────────────────────────
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.footer-name {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--cream);
+  letter-spacing: 0.06em;
+}
+
+.footer-copy {
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+// ─── Ornement central ─────────────────────────────────────────────────────────
+
+.footer-ornament {
+  font-size: 0.7rem;
+  color: var(--gold);
+  opacity: 0.5;
+}
+
+// ─── Liens ────────────────────────────────────────────────────────────────────
+
+.footer-nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-link {
+  font-family: var(--sans);
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover { color: var(--gold); }
+}
+
+// ─── Responsive ───────────────────────────────────────────────────────────────
+
+@media (max-width: 720px) {
+  .footer {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .footer-ornament {
+    display: none;
+  }
+
+  .footer-nav {
+    gap: 1.5rem;
+  }
+}

@@ -1,0 +1,43 @@
+<section class="chapters" id="chapters" aria-labelledby="chapters-label">
+
+  <div class="chapters-inner">
+    <p class="section-label" id="chapters-label" aria-hidden="true">Extraits</p>
+
+    <ol class="chapters-list" role="list">
+      @for (chapter of chapters; track chapter.number; let i = $index) {
+        <li
+          class="chapter-item"
+          [class.is-active]="activeChapter === i"
+          (click)="toggle(i)"
+          (keydown.enter)="toggle(i)"
+          (keydown.space)="toggle(i)"
+          tabindex="0"
+          role="button"
+          [attr.aria-expanded]="activeChapter === i"
+          [attr.aria-label]="'Chapitre ' + chapter.number + ' : ' + chapter.title">
+
+          <div class="chapter-row">
+            <span class="chapter-num" aria-hidden="true">{{ chapter.number }}</span>
+
+            <div class="chapter-center">
+              <h3 class="chapter-title">{{ chapter.title }}</h3>
+              @if (activeChapter === i) {
+                <p class="chapter-description">{{ chapter.description }}</p>
+              }
+            </div>
+
+            <div class="chapter-right">
+              <span class="chapter-page">{{ chapter.page }}</span>
+              <span class="chapter-arrow" aria-hidden="true">
+                {{ activeChapter === i ? '−' : '+' }}
+              </span>
+            </div>
+          </div>
+
+        </li>
+      }
+    </ol>
+
+  </div>
+
+</section>
