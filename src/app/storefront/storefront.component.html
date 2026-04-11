@@ -1,0 +1,49 @@
+<section class="storefront" aria-label="Présentation du livre"
+         aria-labelledby="storefront-title"
+         itemscope
+         itemtype="https://schema.org/Book">
+
+  <!-- Côté texte -->
+  <div class="storefront-text">
+    <p class="storefront-eyebrow">
+      <span itemprop="genre">Biographie</span>
+    </p>
+
+    <h1 class="storefront-title" id="hero-title" itemprop="name">
+      {{ book().titleLine1 }}<br>
+      <em>{{ book().titleLine2 }}</em><br>
+      {{ book().titleLine3 }}
+    </h1>
+
+    <p class="storefront-subtitle" itemprop="description">{{ book().subtitle }}</p>
+
+    <div class="storefront-meta" aria-label="Informations du livre">
+      <address class="hero-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+        <span itemprop="name">{{ book().author }}</span>
+      </address>
+      <span class="sep" aria-hidden="true"></span>
+      <time itemprop="datePublished" [attr.datetime]="book().year">{{ book().year }}</time>
+      <span class="sep" aria-hidden="true"></span>
+      <span>{{ book().pages }}</span>
+    </div>
+
+    <a [href]="book().ctaAnchor" class="storefront-cta" [title]="'Commander ' + book().titleLine1 + ' de ' + book().author">
+      {{ book().ctaLabel }}
+    </a>
+  </div>
+
+  <!-- Côté couverture -->
+  <div class="storefront-image" aria-hidden="true">
+    <div class="storefront-image-inner">
+      <div class="book-cover"
+           role="img"
+           [attr.aria-label]="'Couverture du livre ' + book().titleLine1 + ' par ' + book().author">
+        <div class="book-spine" aria-hidden="true"></div>
+        <p class="book-cover-title" aria-hidden="true">{{ book().titleLine1 }} {{ book().titleLine2 }} {{ book().titleLine3 }}</p>
+        <div class="book-cover-line" aria-hidden="true"></div>
+        <p class="book-cover-author" aria-hidden="true">{{ book().author }}</p>
+      </div>
+    </div>
+  </div>
+
+</section>

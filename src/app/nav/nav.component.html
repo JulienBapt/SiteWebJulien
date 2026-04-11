@@ -5,7 +5,7 @@
 
   <!-- Desktop links -->
   <ul class="nav-links" role="list">
-    @for (link of links; track link.anchor) {
+    @for (link of links(); track link.anchor) {
       <li>
         <a [href]="link.anchor" class="nav-link">{{ link.label }}</a>
       </li>
@@ -15,10 +15,10 @@
   <!-- Mobile burger -->
   <button
     class="nav-burger"
-    [class.is-open]="menuOpen"
+    [class.is-open]="menuOpen()"
     (click)="toggleMenu()"
     aria-label="Ouvrir le menu"
-    [attr.aria-expanded]="menuOpen">
+    [attr.aria-expanded]="menuOpen()">
     <span></span>
     <span></span>
     <span></span>
@@ -26,9 +26,9 @@
 </nav>
 
 <!-- Mobile drawer -->
-<div class="nav-drawer" [class.is-open]="menuOpen" role="dialog" aria-label="Menu mobile">
+<div class="nav-drawer" [class.is-open]="menuOpen()" role="dialog" aria-label="Menu mobile">
   <ul role="list">
-    @for (link of links; track link.anchor) {
+    @for (link of links(); track link.anchor) {
       <li>
         <a [href]="link.anchor" class="nav-drawer-link" (click)="toggleMenu()">
           {{ link.label }}

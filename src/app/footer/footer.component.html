@@ -4,8 +4,8 @@
 
     <!-- Gauche : marque + copyright -->
     <div class="footer-brand">
-      <p class="footer-name">{{ author }}</p>
-      <p class="footer-copy">Biographie &nbsp;·&nbsp; © {{ year }}</p>
+      <p class="footer-name">{{ author() }}</p>
+      <p class="footer-copy">Biographie &nbsp;·&nbsp; © {{ year() }}</p>
     </div>
 
     <!-- Centre : ornement -->
@@ -13,7 +13,7 @@
 
     <!-- Droite : liens -->
     <nav class="footer-nav" aria-label="Liens légaux et contact">
-      @for (link of links; track link.href) {
+      @for (link of links(); track link.href) {
         <a [href]="link.href" class="footer-link">{{ link.label }}</a>
       }
     </nav>

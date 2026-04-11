@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -6,16 +6,18 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './nav.component.html',
-  styleUrl: './nav.component.scss'
+  styleUrl: './nav.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavComponent {
-  links = [
+  links = signal<{ label: string, anchor: string }[]>([
     { label: 'Préface',   anchor: '#preface'  },
-    { label: 'Extraits',  anchor: '#extraits' },
-    { label: 'Photos',    anchor: '#photos'   },
-    { label: 'Chapitres', anchor: '#chapters'},
-  ];
-
-  menuOpen = false;
-  toggleMenu() { this.menuOpen = !this.menuOpen; }
+    { label: 'Exergues',  anchor: '#exergues' },
+    { label: 'Photos',    anchor: '#galerie'   },
+    { label: 'Chapitres', anchor: '#sommaire'},
+  ]);
+  menuOpen = signal<boolean>(false);
+  toggleMenu() {
+    this.menuOpen.set(!this.menuOpen());
+  }
 }

@@ -6,7 +6,7 @@
     <div class="preface-grid">
 
       <div class="preface-left">
-        <h2 class="preface-heading" id="preface-heading">{{ heading }}</h2>
+        <h2 class="preface-heading" id="preface-heading">{{ heading() }}</h2>
         <div class="preface-ornament" aria-hidden="true">
           <span class="ornament-line"></span>
           <span class="ornament-diamond">◆</span>
@@ -14,11 +14,11 @@
         </div>
       </div>
 
-      <div class="preface-right">
-        @for (p of paragraphs; track $index) {
+      <article  class="preface-right" aria-label="Texte de la préface">
+        @for (p of paragraphs(); track $index) {
           <p class="preface-body">{{ p }}</p>
         }
-      </div>
+      </article >
 
     </div>
   </div>

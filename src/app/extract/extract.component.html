@@ -1,29 +1,38 @@
-<section class="extract" id="extraits" aria-labelledby="extract-label">
+<section class="extract" id="exergues" aria-labelledby="extract-heading">
 
   <div class="extract-inner">
-    <p class="extract-label" id="extract-label" aria-hidden="true">Exergues</p>
+    <h2 class="extract-label" id="extract-heading" aria-hidden="true">Exergues</h2>
 
     <!-- Citation principale -->
-    <div class="extract-quote" aria-live="polite">
+    <div class="extract-quote" aria-live="polite"
+         itemscope
+         itemtype="https://schema.org/Quotation">
       <span class="quote-mark" aria-hidden="true">"</span>
-      <p class="extract-chapter">{{ extracts[activeIndex].chapter }}</p>
-      <blockquote class="extract-text">
-        {{ extracts[activeIndex].text }}
+      <p class="extract-chapter" itemprop="spokenByCharacter">{{ extracts()[activeIndex()].chapter }}</p>
+      <blockquote class="extract-text" itemprop="text">
+        {{ extracts()[activeIndex()].text }}
       </blockquote>
-      <p class="extract-page">— {{ extracts[activeIndex].page }}</p>
+      <cite class="extract-page">
+        <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Book">
+          <span class="visually-hidden" itemprop="name">Pour un Journalisme irrespectueux, Itinéraire de Claude Julien</span>
+        </span>
+      <p class="extract-page">— {{ extracts()[activeIndex()].page }}</p>
+      </cite>
     </div>
 
     <!-- Navigation entre les extraits -->
     <nav class="extract-nav" aria-label="Navigation entre les extraits">
-      @for (extract of extracts; track $index) {
+      <button class="extract-arrow" (click)="moveLeft(activeIndex())"><</button>
+      @for (extract of extracts(); track $index) {
         <button
           class="extract-dot"
-          [class.is-active]="activeIndex === $index"
+          [class.is-active]="activeIndex() === $index"
           (click)="setActive($index)"
           [attr.aria-label]="extract.chapter"
-          [attr.aria-current]="activeIndex === $index ? 'true' : null">
+          [attr.aria-current]="activeIndex() === $index ? 'true' : null">
         </button>
       }
+      <button class="extract-arrow" (click)="moveRight(activeIndex())">></button>
     </nav>
 
   </div>

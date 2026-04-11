@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
 
 @Component({
-  selector: 'app-hero',
+  selector: 'app-storefront',
   standalone: true,
-  templateUrl: './hero.component.html',
-  styleUrl: './hero.component.scss'
+  templateUrl: './storefront.component.html',
+  styleUrl: './storefront.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HeroComponent {
-  book = {
+export class StorefrontComponent {
+  book = signal<any>({
     titleLine1: 'Pour un journalisme irrespectueux',
     titleLine2: 'Itinéraire de',
     titleLine3: 'Claude JULIEN',
@@ -17,5 +18,5 @@ export class HeroComponent {
     subtitle: 'Le combat d\'une vie pour gueuler la vérité — récit d\'un parcours singulier.',
     ctaLabel: 'Commander le livre',
     ctaAnchor: '#commander',
-  };
+  });
 }

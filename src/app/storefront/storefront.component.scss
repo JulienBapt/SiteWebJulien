@@ -1,6 +1,6 @@
 // ─── Layout ───────────────────────────────────────────────────────────────────
 
-.hero {
+.storefront {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 88vh;
@@ -9,7 +9,7 @@
 
 // ─── Côté texte ───────────────────────────────────────────────────────────────
 
-.hero-text {
+.storefront-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,8 +17,8 @@
   gap: 1.5rem;
 }
 
-.hero-eyebrow {
-  font-family: var(--sans);
+.storefront-eyebrow {
+  font-family: var(--sans), serif;
   font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: 0.22em;
@@ -26,8 +26,8 @@
   color: var(--gold);
 }
 
-.hero-title {
-  font-family: var(--serif);
+.storefront-title {
+  font-family: var(--serif), serif;
   font-size: 3.8rem;
   font-weight: 300;
   line-height: 1.08;
@@ -39,8 +39,8 @@
   }
 }
 
-.hero-subtitle {
-  font-family: var(--serif);
+.storefront-subtitle {
+  font-family: var(--serif), serif;
   font-size: 1.15rem;
   font-weight: 300;
   font-style: italic;
@@ -49,14 +49,14 @@
   max-width: 34ch;
 }
 
-.hero-meta {
+.storefront-meta {
   display: flex;
   align-items: center;
   gap: 1.2rem;
   padding-top: 0.5rem;
 
   span {
-    font-family: var(--sans);
+    font-family: var(--sans), serif;
     font-size: 0.72rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -71,13 +71,13 @@
   background: var(--gold);
 }
 
-.hero-cta {
+.storefront-cta {
   display: inline-block;
   align-self: flex-start;
   margin-top: 0.5rem;
   padding: 0.85rem 2.2rem;
   border: 1px solid var(--ink);
-  font-family: var(--sans);
+  font-family: var(--sans), serif;
   font-size: 0.72rem;
   font-weight: 400;
   letter-spacing: 0.18em;
@@ -94,13 +94,13 @@
 
 // ─── Côté image ───────────────────────────────────────────────────────────────
 
-.hero-image {
+.storefront-image {
   background: var(--warm);
   overflow: hidden;
   position: relative;
 }
 
-.hero-image-inner {
+.storefront-image-inner {
   width: 100%;
   height: 100%;
   background: linear-gradient(160deg, #d4c4a0 0%, #c4b088 40%, #a89060 100%);
@@ -135,7 +135,7 @@
 }
 
 .book-cover-title {
-  font-family: var(--serif);
+  font-family: var(--serif), serif;
   color: var(--cream);
   font-size: 1.1rem;
   font-weight: 300;
@@ -152,7 +152,7 @@
 }
 
 .book-cover-author {
-  font-family: var(--sans);
+  font-family: var(--sans), serif;
   color: var(--gold);
   font-size: 0.62rem;
   letter-spacing: 0.22em;
@@ -175,32 +175,32 @@
 // ─── Responsive ───────────────────────────────────────────────────────────────
 
 @media (max-width: 720px) {
-  .hero {
+  .storefront {
     grid-template-columns: 1fr;
     min-height: auto;
   }
 
-  .hero-image {
+  .storefront-image {
     height: 60vw;
     min-height: 240px;
     order: -1;
   }
 
-  .hero-text {
+  .storefront-text {
     padding: 2.5rem 1.5rem;
   }
 
-  .hero-title {
+  .storefront-title {
     font-size: 2.6rem;
   }
 }
 
 @media (max-width: 440px) {
-  .hero-title {
+  .storefront-title {
     font-size: 2rem;
   }
 
-  .hero-subtitle {
+  .storefront-subtitle {
     font-size: 1rem;
   }
 }

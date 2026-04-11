@@ -1,35 +1,47 @@
-<section class="chapters" id="chapters" aria-labelledby="chapters-label">
+<section class="chapters" id="sommaire" aria-labelledby="chapters-heading"
+         itemscope
+         itemtype="https://schema.org/TableOfContents">
 
   <div class="chapters-inner">
-    <p class="section-label" id="chapters-label" aria-hidden="true">Extraits</p>
+    <h2 class="chapters-heading" id="chapters-heading">
+      <span class="section-label" aria-hidden="true">Extraits</span>
+      <span class="visually-hidden">Extraits du livre — {{ chapters().length }} chapitres</span>
+    </h2>
 
-    <ol class="chapters-list" role="list">
-      @for (chapter of chapters; track chapter.number; let i = $index) {
+    <ol class="chapters-list" role="list" itemprop="hasPart">
+      @for (chapter of chapters(); track chapter.number; let i = $index) {
         <li
           class="chapter-item"
-          [class.is-active]="activeChapter === i"
+          [class.is-active]="activeChapter() === i"
           (click)="toggle(i)"
           (keydown.enter)="toggle(i)"
           (keydown.space)="toggle(i)"
           tabindex="0"
-          role="button"
-          [attr.aria-expanded]="activeChapter === i"
-          [attr.aria-label]="'Chapitre ' + chapter.number + ' : ' + chapter.title">
+          role="option"
+          [attr.aria-expanded]="activeChapter() === i"
+          [attr.aria-label]="'Chapitre ' + chapter.number + ' : ' + chapter.title"
+          itemscope
+          itemtype="https://schema.org/Chapter" >
 
           <div class="chapter-row">
             <span class="chapter-num" aria-hidden="true">{{ chapter.number }}</span>
 
             <div class="chapter-center">
-              <h3 class="chapter-title">{{ chapter.title }}</h3>
-              @if (activeChapter === i) {
-                <p class="chapter-description">{{ chapter.description }}</p>
-              }
+              <h3 class="chapter-title" itemprop="name">{{ chapter.title }}</h3>
+              <p
+                class="chapter-description"
+                itemprop="description"
+                [class.is-visible]="activeChapter() === i"
+                [class.visually-hidden]="activeChapter() !== i"
+                [attr.aria-hidden]="activeChapter() !== i">
+                {{ chapter.description }}
+              </p>
             </div>
 
             <div class="chapter-right">
               <span class="chapter-page">{{ chapter.page }}</span>
               <span class="chapter-arrow" aria-hidden="true">
-                {{ activeChapter === i ? '−' : '+' }}
+                {{ activeChapter() === i ? '−' : '+' }}
               </span>
             </div>
           </div>

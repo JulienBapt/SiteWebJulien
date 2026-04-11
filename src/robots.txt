@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://marcetienne.julien.free.fr/sitemap.xml

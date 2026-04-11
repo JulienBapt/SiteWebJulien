@@ -10,14 +10,8 @@
   margin: 0 auto;
 }
 
-.section-label {
-  font-family: var(--sans);
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 2.5rem;
+.is-visible {
+  display: flex;
 }
 
 // ─── Liste ────────────────────────────────────────────────────────────────────
@@ -65,7 +59,7 @@
 }
 
 .chapter-num {
-  font-family: var(--serif);
+  font-family: var(--serif), serif;
   font-size: 1rem;
   font-style: italic;
   font-weight: 300;
@@ -82,7 +76,7 @@
 }
 
 .chapter-title {
-  font-family: var(--serif);
+  font-family: var(--serif), serif;
   font-size: 1.25rem;
   font-weight: 300;
   color: var(--ink);
@@ -91,7 +85,7 @@
 }
 
 .chapter-description {
-  font-family: var(--serif);
+  font-family: var(--serif), serif;
   font-size: 0.95rem;
   font-style: italic;
   color: var(--muted);
@@ -107,7 +101,7 @@
 }
 
 .chapter-page {
-  font-family: var(--sans);
+  font-family: var(--sans), serif;
   font-size: 0.7rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -115,7 +109,7 @@
 }
 
 .chapter-arrow {
-  font-family: var(--sans);
+  font-family: var(--sans), serif;
   font-size: 1.1rem;
   font-weight: 300;
   color: var(--muted);

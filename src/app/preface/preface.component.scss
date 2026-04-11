@@ -10,18 +10,6 @@
   margin: 0 auto;
 }
 
-// ─── Label ────────────────────────────────────────────────────────────────────
-
-.section-label {
-  font-family: var(--sans);
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 2.5rem;
-}
-
 // ─── Grille ───────────────────────────────────────────────────────────────────
 
 .preface-grid {
@@ -42,7 +30,7 @@
 }
 
 .preface-heading {
-  font-family: var(--serif);
+  font-family: var(--serif), serif;
   font-size: 2.4rem;
   font-weight: 300;
   font-style: italic;
@@ -80,7 +68,7 @@
 }
 
 .preface-body {
-  font-family: var(--serif);
+  font-family: var(--serif), serif;
   font-size: 1.1rem;
   font-weight: 300;
   line-height: 1.95;

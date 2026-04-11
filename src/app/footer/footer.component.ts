@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
 
 export interface FooterLink {
   label: string;
@@ -9,15 +9,17 @@ export interface FooterLink {
   selector: 'app-footer',
   standalone: true,
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  styleUrl: './footer.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FooterComponent {
-  author = 'Chritine Rigal';
-  year = new Date().getFullYear();
+  author = signal<string>('Chritine Rigal');
+  year = signal<number>(new Date().getFullYear());
 
-  links: FooterLink[] = [
-    { label: 'Presse',           href: '#presse'   },
-    { label: 'Contact',          href: '#contact'  },
-    { label: 'Mentions légales', href: '#mentions' },
-  ];
+  links = signal<FooterLink[]>([
+    { label: 'Préface',           href: '#preface'   },
+    { label: 'Exergues',          href: '#exergues'  },
+    { label: 'Galerie',           href: '#galerie' },
+    { label: 'Chapitres',         href: '#sommaire' },
+  ]);
 }

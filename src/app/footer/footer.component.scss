@@ -24,7 +24,7 @@
 }
 
 .footer-name {
-  font-family: var(--serif);
+  font-family: var(--serif), serif;
   font-size: 1.05rem;
   font-weight: 300;
   font-style: italic;
@@ -33,7 +33,7 @@
 }
 
 .footer-copy {
-  font-family: var(--sans);
+  font-family: var(--sans), serif;
   font-size: 0.65rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -58,7 +58,7 @@
 }
 
 .footer-link {
-  font-family: var(--sans);
+  font-family: var(--sans), serif;
   font-size: 0.68rem;
   font-weight: 400;
   letter-spacing: 0.14em;

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
 
 export interface Chapter {
   number: string;
@@ -11,10 +11,12 @@ export interface Chapter {
   selector: 'app-chapters',
   standalone: true,
   templateUrl: './chapters.component.html',
-  styleUrl: './chapters.component.scss'
+  styleUrl: './chapters.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ChaptersComponent {
-  chapters: Chapter[] = [
+  activeChapter = signal<number | null>(0);
+  chapters = signal<Chapter[]>([
     {
       number: 'I',
       title: 'Origines',
@@ -49,11 +51,9 @@ export class ChaptersComponent {
         'Le 8 mai 1979 l\'assemblée générale de la SDR donne mandat à son conseil d\'administration de lui soumettre un projet de procédure pour désigner son candidat à la direction. Tous s\'accordent sur la nécessité de le trouver au sein de la rédaction afin de préserver l\'indépendance du journal.\n',
       page: 'p. 134',
     },
-  ];
-
-  activeChapter: number | null = null;
+  ]);
 
   toggle(index: number): void {
-    this.activeChapter = this.activeChapter === index ? null : index;
+    this.activeChapter.set(this.activeChapter() === index ? null : index);
   }
 }

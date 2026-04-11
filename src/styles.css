@@ -16,25 +16,14 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--cream);
   color: var(--ink);
-  font-family: var(--sans);
+  font-family: var(--sans), serif;
   font-size: 16px;
   line-height: 1.6;
 }
 
 img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
-/* ─── Variables ──────────────────────────────────────────────────────────────── */
-
-:root {
- --ink:   #1a1610;
- --cream: #f9f5ee;
- --gold:  #b8935a;
- --warm:  #e8ddc8;
- --muted: #7a6e60;
-
- --serif: 'Cormorant Garamond', Georgia, serif;
- --sans:  'Jost', sans-serif;
-}
+.visually-hidden { display: none; }
 
 /* ─── Reset ──────────────────────────────────────────────────────────────────── */
 
@@ -52,7 +41,7 @@ html {
 body {
   background: var(--cream);
   color: var(--ink);
-  font-family: var(--sans);
+  font-family: var(--sans), serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -64,7 +53,7 @@ img {
 }
 
 button {
-  font-family: var(--sans);
+  font-family: var(--sans), serif;
   cursor: pointer;
 }
 
@@ -86,7 +75,7 @@ button {
 }
 
 .divider-ornament {
-  font-family: var(--serif);
+  font-family: var(--serif), serif;
   font-size: 1rem;
   color: var(--gold);
   opacity: 0.6;
@@ -109,7 +98,7 @@ button {
 
 /* ─── Skip link ──────────────────────────────────────────────────────────────── */
 
-/*
+
 a[href="#main-content"] {
   position: absolute;
   top: -100%;
@@ -126,4 +115,15 @@ a[href="#main-content"] {
      top: 1rem;
    }
 }
-*/
+
+/* ─── Label ──────────────────────────────────────────────────────────────────── */
+
+.section-label {
+ font-family: var(--sans), serif;
+ font-size: 1rem;
+ font-weight: 500;
+ letter-spacing: 0.22em;
+ text-transform: uppercase;
+ color: var(--gold);
+ margin-bottom: 2.5rem;
+}

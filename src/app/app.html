@@ -1,7 +1,9 @@
-<app-nav></app-nav>
+<header role="banner">
+  <app-nav></app-nav>
+</header>
 
-<main>
-  <app-hero></app-hero>
+<main id="main-content" role="main">
+  <app-storefront></app-storefront>
 
   <div class="divider" aria-hidden="true">
     <span class="divider-line"></span>
@@ -10,7 +12,11 @@
   </div>
 
   <app-preface id="preface"></app-preface>
-  <app-extract id="extraits"></app-extract>
-  <app-gallery id="photos"></app-gallery>
-  <app-chapters id="chapters"></app-chapters>
+  <app-extract id="exergues"></app-extract>
+  <app-gallery id="galerie"></app-gallery>
+  <app-chapters id="sommaire"></app-chapters>
 </main>
+
+<footer role="contentinfo">
+  <app-footer />
+</footer>
