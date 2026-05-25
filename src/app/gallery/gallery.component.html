@@ -50,7 +50,7 @@
 
       <figure class="lightbox-figure">
         <img
-          [src]="photos()[lightboxIndex()].src"
+          [src]="photos()[lightboxIndex()].srcNotZoom || photos()[lightboxIndex()].src"
           [alt]="photos()[lightboxIndex()].alt"
           class="lightbox-img"
           width="800"

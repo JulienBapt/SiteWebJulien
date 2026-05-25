@@ -14,6 +14,9 @@
       <em>{{ book().titleLine2 }}</em><br>
       {{ book().titleLine3 }}
     </h1>
+    <h2>
+      {{ book().titleLine4 }} <em>{{ book().titleLine4Italic}}</em>
+    </h2>
 
     <p class="storefront-subtitle" itemprop="description">{{ book().subtitle }}</p>
 
@@ -34,14 +37,15 @@
 
   <!-- Côté couverture -->
   <div class="storefront-image" aria-hidden="true">
-    <div class="storefront-image-inner">
-      <div class="book-cover"
-           role="img"
-           [attr.aria-label]="'Couverture du livre ' + book().titleLine1 + ' par ' + book().author">
-        <div class="book-spine" aria-hidden="true"></div>
-        <p class="book-cover-title" aria-hidden="true">{{ book().titleLine1 }} {{ book().titleLine2 }} {{ book().titleLine3 }}</p>
-        <div class="book-cover-line" aria-hidden="true"></div>
-        <p class="book-cover-author" aria-hidden="true">{{ book().author }}</p>
+    <div class="storefront-image-inner" aria-hidden="true">
+      <div class="storefront-image-display">
+      <img src="assets/images/Pour_un_journalisme_irrespectueux_PHP_couverture.jpg"
+           alt="Couverture du livre 'Pour un journalisme irrespecteux' édition PHP"
+           loading="lazy"
+           class="photo-img"
+           width="609"
+           height="907"
+           title="Couverture du livre 'Pour un journalisme irrespecteux' édition PHP"/>
       </div>
     </div>
   </div>

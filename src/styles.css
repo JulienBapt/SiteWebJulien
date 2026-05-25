@@ -127,3 +127,11 @@ a[href="#main-content"] {
  color: var(--gold);
  margin-bottom: 2.5rem;
 }
+
+/* ─── Responsive ─────────────────────────────────────────────────────────────── */
+
+@media (max-width: 720px) {
+  .divider {
+    padding: 0;
+  }
+}

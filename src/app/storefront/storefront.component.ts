@@ -12,10 +12,12 @@ export class StorefrontComponent {
     titleLine1: 'Pour un journalisme irrespectueux',
     titleLine2: 'Itinéraire de',
     titleLine3: 'Claude JULIEN',
+    titleLine4: 'Ancien directeur du',
+    titleLine4Italic: 'Monde diplomatique',
     author: 'Christine Rigal',
     year: '2026',
     pages: '350 pages',
-    subtitle: 'Le combat d\'une vie pour gueuler la vérité — récit d\'un parcours singulier.',
+    subtitle: 'Le combat d\'une vie pour \"gueuler la vérité\" —  (Blaise Pascal, Lettres à un provincial)',
     ctaLabel: 'Commander le livre',
     ctaAnchor: '#commander',
   });
