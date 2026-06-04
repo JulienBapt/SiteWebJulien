@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
+import {ChangeDetectionStrategy, Component, input} from '@angular/core';
 
 @Component({
   selector: 'app-preface',
@@ -8,8 +8,8 @@ import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PrefaceComponent {
-  heading = signal<string>(`Présentation du livre`);
-  paragraphs = signal<string[]>([
+  heading = input<string>("Présentation du livre");
+  paragraphs = input<string[]>([
     "         Ce livre retrace l’itinéraire humain, intellectuel et professionnel d’un journaliste qui a marqué son époque par son regard sur l’impérialisme américain, les désastres de la mondialisation, la désinformation, la place du citoyen, l’indépendance du journaliste face aux pouvoirs, etc.\n" +
     "         À travers ses reportages, ses analyses, sa critique des médias, Claude Julien a incarné une pensée libre qui pourrait éclairer notre temps tellement elle résonne aujourd’hui.\n" +
     "         Il a été pendant 20 ans au service étranger du Monde, puis directeur du Monde diplomatique de 1973 à 1990 dont il a grandement élargi l'audience en s’adressant aux citoyens.\n" +

@@ -1,0 +1,110 @@
+<section
+  class="works"
+  id="ouvrages"
+  aria-labelledby="works-heading"
+  itemscope
+  itemtype="https://schema.org/ItemList">
+
+  <div class="works-inner">
+
+    <h2 class="works-heading section-label" id="works-heading">
+      <span>Bibliographie</span>
+      <span class="visually-hidden" aria-hidden="true">Ouvrages précédemment publiés — {{ works.length }} titres</span>
+    </h2>
+
+    <!-- Liste principale -->
+    <ol class="index-list" role="list">
+      @for (work of works; track work.title + work.year; let i = $index) {
+        <li
+          class="index-item"
+          itemprop="itemListElement"
+          itemscope
+          itemtype="https://schema.org/Book">
+
+          <meta itemprop="position" [attr.content]="i + 1" />
+
+          <!-- Barre colorée par décennie -->
+          <div
+            class="index-bar"
+            [class]="work.decade"
+            aria-hidden="true">
+          </div>
+
+          <!-- Contenu sur 3 colonnes -->
+          <div class="index-content">
+
+            <!-- Colonne 1 : année -->
+            <time
+              class="index-year"
+              [attr.datetime]="work.year"
+              itemprop="datePublished">
+              {{ work.year }}
+            </time>
+
+            <!-- Colonne 2 : titre + meta -->
+            <div class="index-body">
+              <h3 class="index-title" itemprop="name">{{ work.title }}</h3>
+
+              <p class="index-meta">
+                @if (work.collaboration) {
+                  <span class="meta-collab">
+                    avec
+                    <span itemprop="contributor">{{ work.collaboration }}</span>
+                    —
+                  </span>
+                }
+                @if (work.isTranslation) {
+                  <span class="meta-translation">
+                    Traduction de
+                    <cite>{{ work.translationOf }}</cite>
+                    par {{ work.translationBy }} —
+                  </span>
+                }
+                @if (work.edition) {
+                  <span class="meta-edition">{{ work.edition }}</span>
+                }
+              </p>
+            </div>
+
+            <!-- Colonne 3 : éditeur + prix -->
+            <div class="index-right">
+              <span
+                class="index-publisher"
+                itemprop="publisher"
+                itemscope
+                itemtype="https://schema.org/Organization">
+                <span itemprop="name">{{ work.publisher }}</span>
+              </span>
+
+              @if (work.award) {
+                <a
+                  [href]="work.awardUrl"
+                  class="index-award"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  [title]="'En savoir plus sur le ' + work.award"
+                  itemprop="award">
+                  <span class="award-diamond" aria-hidden="true">◆</span>
+                  {{ work.award }}
+                </a>
+              }
+            </div>
+
+          </div>
+        </li>
+      }
+    </ol>
+
+    <!-- Légende des décennies -->
+    <div class="legend" role="note" aria-label="Légende des décennies">
+      @for (leg of legends; track leg.key) {
+        <div class="legend-item">
+          <span class="legend-dot" [class]="leg.key" aria-hidden="true"></span>
+          <span>{{ leg.label }}</span>
+        </div>
+      }
+    </div>
+
+  </div>
+
+</section>

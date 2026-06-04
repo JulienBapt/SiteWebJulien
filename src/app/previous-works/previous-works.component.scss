@@ -1,0 +1,274 @@
+// ─── Palette décennies ────────────────────────────────────────────────────────
+
+$decades: (
+  'd1950': #8B7355,
+  'd1960': #7A9B6F,
+  'd1970': #5B7FA3,
+  'd1990': #B87B6A,
+  'd2000': #7B6EA8,
+);
+
+// ─── Section ──────────────────────────────────────────────────────────────────
+
+.works {
+  padding: 5rem 2.5rem;
+  border-bottom: 0.5px solid var(--warm);
+}
+
+.works-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+// ─── Liste ────────────────────────────────────────────────────────────────────
+
+.index-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+// ─── Item ─────────────────────────────────────────────────────────────────────
+
+.index-item {
+  display: flex;
+  align-items: stretch;
+  border-top: 0.5px solid var(--warm);
+  transition: background 0.2s ease;
+
+  &:last-child {
+    border-bottom: 0.5px solid var(--warm);
+  }
+
+  &:hover {
+    background: rgba(232, 221, 200, 0.25);
+
+    .index-title { color: var(--gold); }
+    .index-year  { opacity: 1; }
+  }
+}
+
+// ─── Barre décennie ───────────────────────────────────────────────────────────
+
+.index-bar {
+  width: 3px;
+  flex-shrink: 0;
+  margin: 8px 0;
+  border-radius: 2px;
+  transition: width 0.2s ease;
+
+  // Génération des classes par décennie
+  @each $key, $color in $decades {
+    &.#{$key} { background: $color; }
+  }
+
+  .index-item:hover & {
+    width: 4px;
+  }
+}
+
+// ─── Contenu 3 colonnes ───────────────────────────────────────────────────────
+
+.index-content {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr auto;
+  gap: 0 2rem;
+  align-items: center;
+  padding: 1rem 0.5rem 1rem 1.2rem;
+  flex: 1;
+}
+
+// ─── Colonne 1 : Année ────────────────────────────────────────────────────────
+
+.index-year {
+  font-family: var(--serif), serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--muted);
+  opacity: 0.75;
+  transition: color 0.25s ease, opacity 0.25s ease;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+// ─── Colonne 2 : Titre + meta ─────────────────────────────────────────────────
+
+.index-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.index-title {
+  font-family: var(--serif), serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1.35;
+  transition: color 0.25s ease;
+}
+
+.index-meta {
+  font-family: var(--sans), serif;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  line-height: 1.5;
+
+  .meta-translation {
+    font-style: italic;
+    cite { font-style: normal; }
+  }
+
+  .meta-edition {
+    font-style: italic;
+  }
+}
+
+// ─── Colonne 3 : Éditeur + prix ───────────────────────────────────────────────
+
+.index-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.index-publisher {
+  font-family: var(--sans), serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+  text-align: right;
+}
+
+.index-award {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--sans), serif;
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  border: 0.5px solid rgba(184, 147, 90, 0.35);
+  padding: 2px 7px;
+  white-space: nowrap;
+  transition: background 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    background: rgba(184, 147, 90, 0.08);
+    border-color: var(--gold);
+  }
+}
+
+.award-diamond {
+  font-size: 0.42rem;
+  line-height: 1;
+}
+
+// ─── Légende ──────────────────────────────────────────────────────────────────
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 0.5px solid var(--warm);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--sans), serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+
+  @each $key, $color in $decades {
+    &.#{$key} { background: $color; }
+  }
+}
+
+// ─── Responsive ───────────────────────────────────────────────────────────────
+
+@media (max-width: 720px) {
+  .works {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .index-content {
+    grid-template-columns: 2.8rem 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.25rem 1.2rem;
+    padding: 1rem 0.5rem 1rem 1rem;
+  }
+
+  // Sur mobile : éditeur passe sous le titre
+  .index-right {
+    grid-column: 2;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.75rem;
+  }
+
+  .index-year {
+    grid-row: 1;
+    align-self: start;
+    padding-top: 0.1rem;
+  }
+
+  .index-body {
+    grid-row: 1;
+  }
+}
+
+@media (max-width: 440px) {
+  .index-content {
+    grid-template-columns: 2.4rem 1fr;
+  }
+
+  .index-title {
+    font-size: 1rem;
+  }
+
+  .index-year {
+    font-size: 1rem;
+  }
+
+  .index-meta {
+    font-size: 0.7rem;
+  }
+
+  .index-publisher {
+    font-size: 0.6rem;
+  }
+
+  .legend {
+    gap: 1rem;
+  }
+
+  .legend-item {
+    font-size: 0.6rem;
+  }
+}

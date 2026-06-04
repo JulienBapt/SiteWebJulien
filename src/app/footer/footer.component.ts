@@ -17,9 +17,10 @@ export class FooterComponent {
   year = signal<number>(new Date().getFullYear());
 
   links = signal<FooterLink[]>([
-    { label: 'Préface',           href: '#preface'   },
-    { label: 'Exergues',          href: '#exergues'  },
+    { label: 'Préface',           href: '#preface' },
+    { label: 'Exergues',          href: '#exergues' },
     { label: 'Galerie',           href: '#galerie' },
     { label: 'Chapitres',         href: '#sommaire' },
+    { label: 'Bibliographie',     href: '#previous-work' },
   ]);
 }

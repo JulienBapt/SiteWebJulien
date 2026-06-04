@@ -18,7 +18,7 @@ export class StorefrontComponent {
     year: '2026',
     pages: '350 pages',
     subtitle: 'Le combat d\'une vie pour \"gueuler la vérité\" —  (Blaise Pascal, Lettres à un provincial)',
-    ctaLabel: 'Commander le livre',
+    ctaLabel: 'COMMANDER',
     ctaAnchor: '#commander',
   });
 }

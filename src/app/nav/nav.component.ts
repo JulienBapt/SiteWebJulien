@@ -13,8 +13,9 @@ export class NavComponent {
   links = signal<{ label: string, anchor: string }[]>([
     { label: 'Préface',   anchor: '#preface'  },
     { label: 'Exergues',  anchor: '#exergues' },
-    { label: 'Photos',    anchor: '#galerie'   },
-    { label: 'Chapitres', anchor: '#sommaire'},
+    { label: 'Photos',    anchor: '#galerie'  },
+    { label: 'Chapitres', anchor: '#sommaire' },
+    { label: 'Bibliographie', anchor: '#previous-work' },
   ]);
   menuOpen = signal<boolean>(false);
   toggleMenu() {

@@ -12,10 +12,11 @@
   </div>
 
   <app-preface id="preface"></app-preface>
-  <app-preface-extension id="preface-extension"></app-preface-extension>
+  <app-preface id="preface-extension" [heading]="prefaceExtensionHeading()" [paragraphs]="prefaceExtensionParagraphs()"></app-preface>
   <app-extract id="exergues"></app-extract>
   <app-gallery id="galerie"></app-gallery>
   <app-chapters id="sommaire"></app-chapters>
+  <app-previous-works id="previous-work"></app-previous-works>
 </main>
 
 <footer role="contentinfo">

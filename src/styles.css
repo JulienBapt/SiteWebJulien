@@ -64,7 +64,7 @@ button {
  align-items: center;
  justify-content: center;
  gap: 1.5rem;
- padding: 3.5rem 2.5rem;
+ padding: 3.5rem 2.5rem 0;
 }
 
 .divider-line {
