@@ -19,12 +19,12 @@ export class ExtractComponent implements OnInit {
   changeExtract = signal<boolean>(true);
   extracts = signal<Extract[]>([
     {
-      chapter: '1942-1949 : Jeunesse Etudiante Chrétienne',
+      chapter: '1942-1949 : Jeunesse Étudiante Chrétienne',
       text: `« L’action militante au sein de la JEC et de l’ACJF a eu une influence déterminante sur mes choix et mes engagements d’adulte dans la société », Claude Julien, 2003.`,
       page: 'Page 22',
     },
     {
-      chapter: '1950-1951 : La dépêche Marocaine',
+      chapter: '1950-1951 : La Dépêche marocaine',
       text: `« Nous n'avons pas commencé par une lacheté [...] à la première grande occasion nous avons été fidèles », Claude Julien, 1950.`,
       page: 'Page 22',
     },

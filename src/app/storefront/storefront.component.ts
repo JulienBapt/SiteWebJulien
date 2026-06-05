@@ -20,5 +20,6 @@ export class StorefrontComponent {
     subtitle: 'Le combat d\'une vie pour \"gueuler la vérité\" —  (Blaise Pascal, Lettres à un provincial)',
     ctaLabel: 'COMMANDER',
     ctaAnchor: '#commander',
+    // ctaAnchor: 'https://www.fnac.com/',
   });
 }

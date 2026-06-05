@@ -18,7 +18,7 @@ export class ChaptersComponent {
   activeChapter = signal<number | null>(0);
   chapters = signal<Chapter[]>([
     {
-      number: 'I',
+      number: '1868-1942',
       title: 'Origines',
       description: 'Comprendre Claude Julien nécessite de remonter le temps. Cerner ses origines, connaître les épreuves traversées dans l’enfance et l’adolescence, apporte un éclairage instructif sur l’homme, son caractère, ses ambitions, ses rejets.\n' +
         'Le 17 mai 1925 Claude Julien naît à Saint-Rome-de-Cernon (Aveyron), neuvième d’une famille qui comptera 11 enfants vivants. La naissance en Aveyron est le fruit du hasard, comme celles de ses frères et sœurs, nés au fil des mutations du père, employé à la Compagnie des chemins de fer du Midi depuis octobre 1905. \n' +
@@ -26,7 +26,7 @@ export class ChaptersComponent {
       page: 'p. 12',
     },
     {
-      number: 'II',
+      number: '1942-1949',
       title: 'Jeunesse étudiante chrétienne',
       description: ' L’action militante au sein de la JEC et de l’ACJF1 a eu une influence déterminante sur mes choix et mes engagements d’adulte dans la société. » Claude Julien, 2003.\n' +
         'Présentation de la JEC\n' +
@@ -34,7 +34,7 @@ export class ChaptersComponent {
       page: 'p. 48',
     },
     {
-      number: 'IV',
+      number: '1951-1972',
       title: 'Le Monde',
       description: '« Ce qui est légal n’est pas forcément démocratique [...] le suffrage universel n’est pas une garantie de démocratie » Claude Julien, 1961.\n' +
         'Le rêve de Claude Julien est d’entrer au Monde. Soutenu par Georges Hourdin, très proche de Hubert Beuve-Méry directeur du quotidien du soir, Claude Julien obtient un rendez-vous avec ce dernier en mai ou juin 1951. Pour Hubert Beuve-Méry, ne pas avoir suivi la ligne politique attendue du général Juin est une marque d’indépendance appréciable : « Beuve [Hubert Beuve-Méry] m’a reçu dans son bureau. Il m’a demandé pourquoi je n’étais pas resté à Tanger car il trouvait que ce que j’y faisais était intéressant. J’avais sur moi la lettre que j’avais reçue de la résidence [...] je la lui ai montrée. Après l’avoir lue, il m’a regardé en me disant : "c’est de gens comme vous dont j’ai besoin". Moi, j’étais devant lui, admiratif devant l’homme, le Dieu qui avait créé et développé le journal que j’appréciais le plus. Et Beuve a ajouté : " écoutez, ce journal existe depuis sept ans, mais son existence est menacée à tout moment. Mais enfin, si vous voulez tenter l’aventure..."1 ». \n' +
@@ -42,7 +42,7 @@ export class ChaptersComponent {
       page: 'p. 82',
     },
     {
-      number: 'VI',
+      number: '1979-1982',
       title: 'Succession à la direction du Monde',
       description: 'Directeur du Monde depuis 1969, Jacques Fauvet1 doit quitter ses fonctions le 31 décembre 1979. Aucun successeur n\'ayant été sérieusement pressenti, Jacques Fauvet demande en juin 1978 à la Société des Rédacteurs2 (SDR) que son mandat soit prolongé de 3 ans afin de préparer sa succession. Ceci lui est accordé de justesse le 15 octobre 1978, puis confirmé le 31 mai 1979 par l\'Assemblée générale de la SARL3 Le Monde.\n' +
         'Commence alors l\'épisode "succession" à proprement parler, qui va durer jusqu\'à la désignation d\'André Laurens le 23 mars 1982.\n' +
