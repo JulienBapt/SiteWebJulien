@@ -13,8 +13,15 @@
       </div>
 
       <article  class="preface-right" aria-label="Texte de la préface">
-        @for (p of paragraphs(); track $index) {
-          <p class="preface-body">{{ p }}</p>
+        @if (mainPreface()) {
+        <p class="preface-body"><span class="margin-text"></span>Ce livre retrace l’itinéraire humain, intellectuel et professionnel d’un journaliste qui a marqué son époque par son regard sur l’impérialisme américain, les désastres de la mondialisation, la désinformation, la place du citoyen, l’indépendance du journaliste face aux pouvoirs, etc.</p>
+        <p class="preface-body"><span class="margin-text"></span>À travers ses reportages, ses analyses, sa critique des médias, Claude Julien a incarné une pensée libre qui pourrait éclairer notre temps tellement elle résonne aujourd’hui.</p>
+        <p class="preface-body"><span class="margin-text"></span>Il a été pendant 20 ans au service étranger du <span class="italic">Monde</span>, puis directeur du <span class="italic">Monde diplomatique</span> de 1973 à 1990 dont il a grandement élargi l'audience en s’adressant aux citoyens.</p>
+        <p class="preface-body"><span class="margin-text"></span>Il a notamment publié L'Empire américain (Grasset, 1968, Prix Aujourd'hui), Le Suicide des démocraties (Grasset, 1972), Le Rêve et l'Histoire - Deux siècles d'Amérique (Grasset, 1976), Le devoir d'irrespect (Moreau, 1979) dont est extrait cette définition du journalisme qu’il a tenté d’incarner : « celui qui tente de penser et d'écrire n'a d'autre choix que de révéler ce que tout pouvoir s'efforce de cacher, d'exposer en pleine lumière ce que tout pouvoir veut présenter sous l'éclairage le plus favorable, de mettre le doigt sur les contradictions et les impostures, d'attirer les regards sur ce qu'il peut être difficile de percevoir, d'écouter ceux qui ont peu de moyens de se faire entendre, de traduire ce qu'ils disent parfois si bien alors que nul ne les écoute. »</p>
+        }
+        @else {
+          <p class="preface-body"><span class="margin-text"></span>L’auteure, Christine Rigal, est la troisième des quatre enfants de Jacqueline et Claude Julien. Après une Maîtrise d’histoire, elle a consacré sa vie professionnelle à la formation pour les adultes au sein de l’Éducation nationale. Tout d’abord dans les dispositifs de formation personnalisée d’un GRETA (GRoupement d’ETAblissements), puis à la Validation des Acquis de l’Expérience (VAE) dans sa région du Sud-Ouest.</p>
+          <p class="preface-body"><span class="margin-text"></span>À la retraite en 2019, elle a plongé dans les archives (familiales, nationales et internationales) afin de retracer le parcours exceptionnel de Claude Julien, fils du chef de la petite gare de Labruguière dans le Tarn.</p>
         }
       </article >
 

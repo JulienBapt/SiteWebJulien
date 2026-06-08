@@ -3,6 +3,7 @@ import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
 export interface Chapter {
   number: string;
   title: string;
+  titleItalic?: string;
   description: string;
   page: string;
 }
@@ -35,7 +36,8 @@ export class ChaptersComponent {
     },
     {
       number: '1951-1972',
-      title: 'Le Monde',
+      title: '',
+      titleItalic: 'Le Monde',
       description: '« Ce qui est légal n’est pas forcément démocratique [...] le suffrage universel n’est pas une garantie de démocratie » Claude Julien, 1961.\n' +
         'Le rêve de Claude Julien est d’entrer au Monde. Soutenu par Georges Hourdin, très proche de Hubert Beuve-Méry directeur du quotidien du soir, Claude Julien obtient un rendez-vous avec ce dernier en mai ou juin 1951. Pour Hubert Beuve-Méry, ne pas avoir suivi la ligne politique attendue du général Juin est une marque d’indépendance appréciable : « Beuve [Hubert Beuve-Méry] m’a reçu dans son bureau. Il m’a demandé pourquoi je n’étais pas resté à Tanger car il trouvait que ce que j’y faisais était intéressant. J’avais sur moi la lettre que j’avais reçue de la résidence [...] je la lui ai montrée. Après l’avoir lue, il m’a regardé en me disant : "c’est de gens comme vous dont j’ai besoin". Moi, j’étais devant lui, admiratif devant l’homme, le Dieu qui avait créé et développé le journal que j’appréciais le plus. Et Beuve a ajouté : " écoutez, ce journal existe depuis sept ans, mais son existence est menacée à tout moment. Mais enfin, si vous voulez tenter l’aventure..."1 ». \n' +
         'Claude Julien fait partie de ces candidats dont Hubert Beuve-Méry a dit qu’ils étaient « des gens qui en voulaient. Il y avait une sélection à faire suivant leurs aptitudes, ça c’était une autre question, mais sur le fond du caractère on avait une sécurité à peu près complète2 ». On venait au Monde pour ce qu’il représentait, la place qu’il occupait. Les rédacteurs étaient liés « par l’envie diffuse et acharnée de faire un journal propre3 ».',
@@ -43,7 +45,8 @@ export class ChaptersComponent {
     },
     {
       number: '1979-1982',
-      title: 'Succession à la direction du Monde',
+      title: 'Succession à la direction du ',
+      titleItalic: 'Monde',
       description: 'Directeur du Monde depuis 1969, Jacques Fauvet1 doit quitter ses fonctions le 31 décembre 1979. Aucun successeur n\'ayant été sérieusement pressenti, Jacques Fauvet demande en juin 1978 à la Société des Rédacteurs2 (SDR) que son mandat soit prolongé de 3 ans afin de préparer sa succession. Ceci lui est accordé de justesse le 15 octobre 1978, puis confirmé le 31 mai 1979 par l\'Assemblée générale de la SARL3 Le Monde.\n' +
         'Commence alors l\'épisode "succession" à proprement parler, qui va durer jusqu\'à la désignation d\'André Laurens le 23 mars 1982.\n' +
         'Dix ans après qu\'Hubert Beuve-Méry a transmis tout naturellement le flambeau à Jacques Fauvet, son rédacteur en chef depuis 1963, la situation est assez floue pour que la SDR s\'empare de la question. Avec sa minorité de blocage au sein de la SARL, elle a le pouvoir de paralyser la désignation d\'un directeur qui ne lui conviendrait pas. Forte de cette position, elle « s\'attribue le droit de choisir son directeur4. »\n' +

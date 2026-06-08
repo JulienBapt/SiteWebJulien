@@ -80,10 +80,11 @@
 
 .photo-caption-year {
   font-family: var(--serif), serif;
-  font-size: 0.85rem;
+  font-size: 1.2rem;
   font-style: italic;
   color: var(--gold);
   margin-top: 2px;
+  font-weight: 700;
 }
 
 // ─── Lightbox ─────────────────────────────────────────────────────────────────
@@ -150,6 +151,8 @@
   font-style: italic;
   color: var(--gold);
   margin-top: 4px;
+  font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .lightbox-nav {

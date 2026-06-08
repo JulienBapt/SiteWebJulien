@@ -128,6 +128,16 @@ a[href="#main-content"] {
  margin-bottom: 2.5rem;
 }
 
+/* ─── Utility classes ─────────────────────────────────────────────────────────── */
+
+.italic {
+  font-style: italic;
+}
+
+.margin-text {
+  margin-right: 3rem;
+}
+
 /* ─── Responsive ─────────────────────────────────────────────────────────────── */
 
 @media (max-width: 720px) {

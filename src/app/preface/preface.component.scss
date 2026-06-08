@@ -69,16 +69,11 @@
 
 .preface-body {
   font-family: var(--serif), serif;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.95;
-  color: var(--muted);
+  color: var(--ink);
   white-space: break-spaces;
-
-  &:first-child {
-    font-size: 1.2rem;
-    color: var(--ink);
-  }
 }
 
 // ─── Responsive ───────────────────────────────────────────────────────────────

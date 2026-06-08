@@ -3,6 +3,7 @@ import {interval} from 'rxjs';
 
 export interface Extract {
   chapter: string;
+  chapterItalic?: string;
   text: string;
   page: string;
 }
@@ -24,17 +25,20 @@ export class ExtractComponent implements OnInit {
       page: 'Page 22',
     },
     {
-      chapter: '1950-1951 : La Dépêche marocaine',
+      chapter: '1950-1951 : ',
+      chapterItalic: 'La Dépêche marocaine',
       text: `« Nous n'avons pas commencé par une lacheté [...] à la première grande occasion nous avons été fidèles », Claude Julien, 1950.`,
       page: 'Page 22',
     },
     {
-      chapter: '1951-1971 : Le Monde',
+      chapter: '1951-1971 : ',
+      chapterItalic: 'Le Monde',
       text: `« Ce qui est légal n’est pas forcément démocratique [...] le suffrage universel n’est pas une garantie de démocratie », Claude Julien, 1961.`,
       page: 'Page 91',
     },
     {
-      chapter: '1973-1990 : Le Monde diplomatique',
+      chapter: '1973-1990 : ',
+      chapterItalic: 'Le Monde diplomatique',
       text: `« Contribuer à l'active participation de ce que la république appelait naguère "des citoyens conscients et éclairés" », Claude Julien, 1990.`,
       page: 'Page 143',
     },
@@ -59,6 +63,7 @@ export class ExtractComponent implements OnInit {
 
   setActive(index: number): void {
     this.activeIndex.set(index);
+    this.changeExtract.set(false);
   }
 
   moveLeft(index: number): void {
