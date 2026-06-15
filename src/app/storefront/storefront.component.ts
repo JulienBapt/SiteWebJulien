@@ -1,10 +1,14 @@
 import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
+import {NgOptimizedImage} from '@angular/common';
 
 @Component({
   selector: 'app-storefront',
   standalone: true,
   templateUrl: './storefront.component.html',
   styleUrl: './storefront.component.scss',
+  imports: [
+    NgOptimizedImage
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class StorefrontComponent {
