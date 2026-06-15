@@ -10,13 +10,18 @@
     <span class="divider-ornament">✦</span>
     <span class="divider-line"></span>
   </div>
-
   <app-preface id="preface"></app-preface>
   <app-preface id="preface-extension" [heading]="prefaceExtensionHeading()" [mainPreface]="false"></app-preface>
   <app-extract id="exergues"></app-extract>
   <app-gallery id="galerie"></app-gallery>
   <app-chapters id="sommaire"></app-chapters>
   <app-previous-works id="previous-work"></app-previous-works>
+
+  @if (windowScrolled()) {
+    <button class="scroll-to-top-btn" title="Remonter" (click)="scrollToTop()" type="button" aria-label="Remonte en haut">
+      <img class="scroll-to-top-img" alt="Flèche pour remonter en haut" ngSrc="/assets/images/angle-circle-arrow-up-icon.png" height="48" width="48">
+    </button>
+  }
 </main>
 
 <footer role="contentinfo">

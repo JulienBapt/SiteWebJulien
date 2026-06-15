@@ -138,10 +138,31 @@ a[href="#main-content"] {
   margin-right: 3rem;
 }
 
+/* ─── Scroll to top ─────────────────────────────────────────────────────────────── */
+
+.scroll-to-top-btn {
+  outline: 1px solid var(--cream);
+  border: black;
+  position: fixed;
+  right: 15px;
+  bottom: 50px;
+  border-radius: 25px;
+  user-select: none;
+}
+
+.scroll-to-top-img {
+  color: var(--cream);
+}
+
 /* ─── Responsive ─────────────────────────────────────────────────────────────── */
 
 @media (max-width: 720px) {
   .divider {
     padding: 0;
+  }
+
+  .scroll-to-top-btn {
+    width: 10%;
+    right: 5px;
   }
 }
