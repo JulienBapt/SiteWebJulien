@@ -1,6 +1,8 @@
-import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
+import {ChangeDetectionStrategy, Component, inject, signal} from '@angular/core';
+import {ViewportScroller} from '@angular/common';
 
 export interface Chapter {
+  id: number;
   number: string;
   title: string;
   titleItalic?: string;
@@ -16,9 +18,11 @@ export interface Chapter {
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ChaptersComponent {
+  private viewportScroller = inject(ViewportScroller);
   activeChapter = signal<number | null>(0);
   chapters = signal<Chapter[]>([
     {
+      id: 0,
       number: '1868-1942',
       title: 'Origines',
       description: 'Hélas pour Claude Julien, Léontine ne peut assurer ses frais scolaires pour qu’il aille au lycée. Il obtient le Certificat d’Études primaires élémentaires en juin 1937 avec la mention bien. Le manque de moyens financiers fait qu’il est orienté vers la filière EPS (Enseignement Primaire Supérieur) dont la fonction est « d’acheminer les élèves vers les professions auxquelles les prédestine le milieu natal, c’est-à-dire les emplois subalternes et moyens de l’industrie, du commerce et de l’administration.  » Cet événement est un élément fondateur de la personnalité de Claude Julien qui, tout en ayant une conscience aigüe que sa mère ne peut faire autrement, vit cette impossibilité de poursuivre des études générales comme une injustice. Injustice d’autant plus grande qu’il a bien repéré que ses camarades mieux lotis n’ont pas de goût particulier pour les études, et probablement moins de talent que lui… Iniquité sociale qui le marque de façon définitive, et participe vraisemblablement à ses choix futurs.\n' +
@@ -26,6 +30,7 @@ export class ChaptersComponent {
       page: 'p. 9',
     },
     {
+      id: 1,
       number: '1942-1949',
       title: 'Jeunesse étudiante chrétienne',
       description: 'Tout n’est cependant pas simple : « le jour que j’attendais depuis longtemps est arrivé. Nous sommes libérés des Allemands. Mais la liberté n’est encore pas complète. Il faut libérer les esprits. C’est le plus dur. […] Ce qui est à craindre, c’est, par réaction, un nazisme français. En tout cas, au-tour de moi, on emploie, sous l’étiquette “communisme” ou sans étiquette du tout, des procédés allemands… » Liesse, bien compréhensible de la foule, mais aussi égarements qui ne lui conviennent pas du tout. « Avec quelques jeunes camarades appartenant à divers mouvements d’Action Catholique, nous sentions bien qu’il fallait d’urgence prendre des mesures pour éviter tout débordement. […] Mes amis me confièrent donc le soin d’aller voir le commandant Dunoyer de Segonzac pour lui présenter notre requête. Je lui exposai nos observations et notre désir de faire respecter la “loi du maquis”. Il m’écouta avec une ostensible bienveillance, dans un silence qui ne pouvait que m’intimider davantage. Il me donna volontiers raison. » Dunoyer de Segonzac estime nécessaire d’informer la population et en confie la charge à Claude Julien. S’en suit un échange durant lequel le commandant du maquis balaie chaque objection du jeune jéciste :\n' +
@@ -39,6 +44,7 @@ export class ChaptersComponent {
       page: 'p. 48',
     },
     {
+      id: 2,
       number: '1950-1951',
       title: '',
       titleItalic: 'La Dépèche marocainee',
@@ -47,6 +53,7 @@ export class ChaptersComponent {
       page: 'p. 82',
     },
     {
+      id: 3,
       number: '1951-1972',
       title: '',
       titleItalic: 'Le Monde',
@@ -56,6 +63,7 @@ export class ChaptersComponent {
       page: 'p. 82',
     },
     {
+      id: 4,
       number: '1979-1982',
       title: 'Succession à la direction du ',
       titleItalic: 'Monde',
@@ -68,5 +76,9 @@ export class ChaptersComponent {
 
   toggle(index: number): void {
     this.activeChapter.set(this.activeChapter() === index ? null : index);
+    const anchor = "chapitre-" + index;
+    setTimeout(() => {
+      this.viewportScroller.scrollToAnchor(anchor, {behavior: "instant"});
+    });
   }
 }
