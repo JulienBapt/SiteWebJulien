@@ -13,14 +13,14 @@ import {NgOptimizedImage} from '@angular/common';
 })
 export class StorefrontComponent {
   book = signal<any>({
-    titleLine1: 'Pour un journalisme irrespectueux',
+    titleLine1: 'Un journaliste irrespectueux',
     titleLine2: 'Itinéraire de',
     titleLine3: 'Claude JULIEN',
     titleLine4: 'Ancien directeur du',
     titleLine4Italic: 'Monde diplomatique',
     author: 'Christine Rigal',
     year: '2026',
-    pages: '350 pages',
+    pages: '290 pages',
     subtitle: 'Le combat d\'une vie pour \"gueuler la vérité\" —  (Blaise Pascal, Lettres à un provincial)',
     ctaLabel: 'COMMANDER',
     ctaAnchor: '#commander',

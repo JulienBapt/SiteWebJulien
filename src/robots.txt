@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://marcetienne.julien.free.fr/sitemap.xml
+Sitemap: https://journalisme-irrespectueux.pages-perso.free.fr/sitemap.xml
