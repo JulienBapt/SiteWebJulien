@@ -22,30 +22,30 @@ export class ExtractComponent implements OnInit {
     {
       chapter: '1942-1949 : Jeunesse Étudiante Chrétienne',
       text: `« L’action militante au sein de la JEC et de l’ACJF a eu une influence déterminante sur mes choix et mes engagements d’adulte dans la société », Claude Julien, 2003.`,
-      page: 'Page 22',
+      page: 'Page 17',
     },
     {
       chapter: '1950-1951 : ',
       chapterItalic: 'La Dépêche marocaine',
       text: `« Nous n'avons pas commencé par une lacheté [...] à la première grande occasion nous avons été fidèles », Claude Julien, 1950.`,
-      page: 'Page 22',
+      page: 'Page 57',
     },
     {
       chapter: '1951-1971 : ',
       chapterItalic: 'Le Monde',
       text: `« Ce qui est légal n’est pas forcément démocratique [...] le suffrage universel n’est pas une garantie de démocratie », Claude Julien, 1961.`,
-      page: 'Page 91',
+      page: 'Page 77',
     },
     {
       chapter: '1973-1990 : ',
       chapterItalic: 'Le Monde diplomatique',
       text: `« Contribuer à l'active participation de ce que la république appelait naguère "des citoyens conscients et éclairés" », Claude Julien, 1990.`,
-      page: 'Page 143',
+      page: 'Page 169',
     },
     {
       chapter: '1986-1998 : Engagement dans la Ligue',
       text: `« La citoyenneté n'est pas un concept, elle ne peut être qu'une pratique" », Claude Julien, 1990.`,
-      page: 'Page 267',
+      page: 'Page 231',
     },
   ]);
 

@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class NavComponent {
   links = signal<{ label: string, anchor: string }[]>([
-    { label: 'Préface',   anchor: '#preface'  },
+    { label: 'Présentation',   anchor: '#preface'  },
     { label: 'Exergues',  anchor: '#exergues' },
     { label: 'Photos',    anchor: '#galerie'  },
     { label: 'Chapitres', anchor: '#sommaire' },
