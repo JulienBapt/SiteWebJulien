@@ -11,6 +11,8 @@
       <p class="extract-chapter" itemprop="spokenByCharacter">{{ extracts()[activeIndex()].chapter }} <span class="italic">{{ extracts()[activeIndex()].chapterItalic }}</span></p>
       <blockquote class="extract-text" itemprop="text">
         {{ extracts()[activeIndex()].text }}
+        <br>
+        {{ extracts()[activeIndex()].authorAndDate }}
       </blockquote>
       <cite class="extract-page">
         <span itemprop="isPartOf" itemscope itemtype="https://schema.org/Book">

@@ -30,12 +30,11 @@
               <div class="chapter-center">
                 <h3 class="chapter-title" itemprop="name">{{ chapter.title }} <span class="italic">{{ chapter.titleItalic }}</span></h3>
                 @if (activeChapter() === i) {
-                  <p
+                  <div
                     class="chapter-description"
                     itemprop="description"
-                    [attr.aria-hidden]="activeChapter() !== i">
-                    {{ chapter.description }}
-                  </p>
+                    [attr.aria-hidden]="activeChapter() !== i" [innerHTML]="chapter.description">
+                  </div>
                 }
               </div>
 

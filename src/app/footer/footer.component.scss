@@ -37,7 +37,7 @@
   font-size: 0.65rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--middlegold);
 }
 
 // ─── Ornement central ─────────────────────────────────────────────────────────
@@ -63,9 +63,37 @@
   font-weight: 400;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--lightgold);
   text-decoration: none;
   transition: color 0.2s ease;
+
+  &:hover { color: var(--darkgold); }
+}
+
+// ─── Liens ────────────────────────────────────────────────────────────────────
+
+.footer-contact-bloc {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 0.35rem;
+}
+
+.footer-contact {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  color: var(--cream);
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover { color: var(--darkgold); }
+}
+
+.footer-contact-text {
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: none;
 
   &:hover { color: var(--gold); }
 }

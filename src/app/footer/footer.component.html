@@ -8,15 +8,24 @@
       <p class="footer-copy">Biographie &nbsp;·&nbsp; © {{ year() }}</p>
     </div>
 
-    <!-- Centre : ornement -->
+    <!-- Ornement -->
     <div class="footer-ornament" aria-hidden="true">✦</div>
 
-    <!-- Droite : liens -->
+    <!-- Centre : liens -->
     <nav class="footer-nav" aria-label="Liens légaux et contact">
       @for (link of links(); track link.href) {
         <a [href]="link.href" class="footer-link">{{ link.label }}</a>
       }
     </nav>
+
+    <!-- Ornement -->
+    <div class="footer-ornament" aria-hidden="true">✦</div>
+
+    <!-- Droite : contact -->
+    <div class="footer-contact-bloc">
+      <a href="mailto:journalisme.irrespectueux@free.fr" class="footer-name footer-contact">Contact</a>
+      <a href="mailto:journalisme.irrespectueux@free.fr" class="footer-copy footer-contact-text">Pour m'envoyer un mail</a>
+    </div>
 
   </div>
 
