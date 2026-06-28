@@ -106,7 +106,7 @@ export class PreviousWorksComponent {
       edition:   '2ᵉ édition revue et corrigée',
     },
     {
-      title:     'Le Rêve et l\'Histoire. Deux siècles d\'Amérique',
+      title:     'Le Rêve et l\'Histoire, deux siècles d\'Amérique',
       publisher: 'Grasset',
       year:      1976,
       decade:    'd1970',
@@ -129,7 +129,7 @@ export class PreviousWorksComponent {
       publisher: 'HB',
       year:      2007,
       decade:    'd2000',
-      edition:   '2ᵉ édition',
+      edition:   '2ᵉ édition augmentée',
     },
   ];
 }

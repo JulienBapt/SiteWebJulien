@@ -20,7 +20,7 @@ export class FooterComponent {
     { label: 'Présentation',      href: '#preface' },
     { label: 'Exergues',          href: '#exergues' },
     { label: 'Galerie',           href: '#galerie' },
-    { label: 'Chapitres',         href: '#sommaire' },
+    { label: 'Extraits',          href: '#sommaire' },
     { label: 'Bibliographie',     href: '#previous-work' },
   ]);
 }

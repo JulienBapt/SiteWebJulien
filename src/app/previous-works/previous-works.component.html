@@ -50,14 +50,13 @@
                   <span class="meta-collab">
                     avec
                     <span itemprop="contributor">{{ work.collaboration }}</span>
-                    —
                   </span>
                 }
                 @if (work.isTranslation) {
                   <span class="meta-translation">
                     Traduction de
                     <cite>{{ work.translationOf }}</cite>
-                    par {{ work.translationBy }} —
+                    par {{ work.translationBy }}
                   </span>
                 }
                 @if (work.edition) {

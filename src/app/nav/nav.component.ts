@@ -13,8 +13,8 @@ export class NavComponent {
   links = signal<{ label: string, anchor: string }[]>([
     { label: 'Présentation',   anchor: '#preface'  },
     { label: 'Exergues',  anchor: '#exergues' },
-    { label: 'Photos',    anchor: '#galerie'  },
-    { label: 'Chapitres', anchor: '#sommaire' },
+    { label: 'Galerie',    anchor: '#galerie'  },
+    { label: 'Extraits', anchor: '#sommaire' },
     { label: 'Bibliographie', anchor: '#previous-work' },
   ]);
   menuOpen = signal<boolean>(false);
