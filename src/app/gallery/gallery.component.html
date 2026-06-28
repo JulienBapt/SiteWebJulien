@@ -44,10 +44,10 @@
     role="dialog"
     aria-modal="true"
     [attr.aria-label]="'Photos : ' + photos()[lightboxIndex()].caption"
-    (click)="closeLightbox()">
+    (click)="closeLightbox()" (keydown)="useArrow($event)">
 
     <div class="lightbox-content" (click)="$event.stopPropagation()">
-      <button class="lightbox-close" (click)="closeLightbox()" aria-label="Fermer la galerie">✕</button>
+      <button #focusForKeydown class="lightbox-close" (click)="closeLightbox()" aria-label="Fermer la galerie">✕</button>
 
       <figure class="lightbox-figure">
         <img

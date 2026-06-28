@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, signal} from '@angular/core';
+import {ChangeDetectionStrategy, Component, ElementRef, signal, ViewChild} from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 export interface Photo {
@@ -128,10 +128,25 @@ export class GalleryComponent {
   openLightbox(index: number): void {
     this.lightboxIndex.set(index);
     this.lightboxOpen.set(true);
+    setTimeout(() => {
+      this.focusForKeydown.nativeElement.focus();
+    });
   }
 
   closeLightbox(): void {
     this.lightboxOpen.set(false);
+  }
+
+  @ViewChild('focusForKeydown') focusForKeydown!: ElementRef<HTMLInputElement>;
+
+  useArrow(event: any): void {
+    if (event.key === 'ArrowLeft') {
+      this.prevPhoto();
+    } else if (event.key === 'ArrowRight') {
+      this.nextPhoto();
+    } else if (event.key === 'Escape') {
+      this.closeLightbox()
+    }
   }
 
   prevPhoto(): void {
