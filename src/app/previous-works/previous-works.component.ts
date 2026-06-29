@@ -94,7 +94,7 @@ export class PreviousWorksComponent {
     },
     {
       title:     'Le Suicide des démocraties',
-      publisher: 'Grasset, Paris',
+      publisher: 'Grasset',
       year:      1972,
       decade:    'd1970',
     },

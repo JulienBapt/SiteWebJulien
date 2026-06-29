@@ -103,6 +103,7 @@ $decades: (
   font-family: var(--serif), serif;
   font-size: 1.3rem;
   font-weight: 300;
+  font-style: italic;
   color: var(--ink);
   line-height: 1.35;
   transition: color 0.25s ease;
@@ -117,12 +118,10 @@ $decades: (
   line-height: 1.5;
 
   .meta-translation {
-    font-style: italic;
-    cite { font-style: normal; }
+    cite { font-style: italic; }
   }
 
   .meta-edition {
-    font-style: italic;
   }
 }
 
