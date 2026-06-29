@@ -56,14 +56,14 @@ export class GalleryComponent {
      {
       src: 'assets/images/1960_Service_étranger_zoom.jpg',
       srcNotZoom: 'assets/images/1960_Service_étranger.jpg',
-      alt: 'Claude Julien au service Étranger du <i>Monde</i>',
+      alt: 'Claude Julien au service Étranger du Monde',
       caption: 'Claude Julien au service Étranger du <i>Monde</i>',
       year: '1960',
     },
     {
       src: 'assets/images/1970_Conf_de_rédaction_zoom.jpg',
       srcNotZoom: 'assets/images/1970_Conf_de_rédaction.jpg',
-      alt: 'Claude Julien à une conférence de rédaction du <i>Monde</i>',
+      alt: 'Claude Julien à une conférence de rédaction du Monde',
       caption: 'Claude Julien à une conférence de rédaction du <i>Monde</i>',
       year: '1970',
     },
@@ -89,7 +89,7 @@ export class GalleryComponent {
     {
       src: 'assets/images/1980_Au_Diplo_Scianna_zoom.jpg',
       srcNotZoom: 'assets/images/1980_Au_Diplo_Scianna.jpg',
-      alt: 'Claude Julien au <i>Monde diplomatique</i>',
+      alt: 'Claude Julien au Monde diplomatique',
       caption: 'Claude Julien au <i>Monde diplomatique</i>',
       year: '1980',
     },
@@ -102,14 +102,14 @@ export class GalleryComponent {
     },
     {
       src: 'assets/images/1980_Election_Micro_Scianna.jpg',
-      alt: 'Claude Julien à une réunion pour la succession au <i>Monde</i> (©Scianna)',
+      alt: 'Claude Julien à une réunion pour la succession au Monde (©Scianna)',
       caption: 'Claude Julien à une réunion pour la succession au <i>Monde</i> (©Scianna)',
       year: '1980',
     },
     {
       src: 'assets/images/1980_Imprimerie_zoom.jpg',
       srcNotZoom: 'assets/images/1980_Imprimerie_zoom.jpg',
-      alt: 'Claude Julien à l\'imprimerie du <i>Monde</i>',
+      alt: 'Claude Julien à l\'imprimerie du Monde',
       caption: 'Claude Julien à l\'imprimerie du <i>Monde</i>',
       year: '1980',
     },
