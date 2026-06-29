@@ -6,7 +6,7 @@
       <span class="gallery-heading-subtitle"><br>(Cliquez pour agrandir)</span>
       <span class="visually-hidden" aria-hidden="true"> Galerie photos — {{ photos().length }} photos de Claude Julien</span>
     </h2>
-    <div class="gallery-grid" role="list">
+    <div class="gallery-grid" role="list" >
       @for (photo of photos(); track photo.src; let i = $index) {
         <figure
           class="photo-card"
@@ -24,9 +24,9 @@
             width="400"
             height="533"
             [attr.title]="photo.caption + ' — ' + photo.year" />
-          <div class="photo-overlay" aria-hidden="true">
+          <div class="photo-overlay" aria-hidden="true" >
             <figcaption class="photo-caption">
-              <p class="photo-caption-title">{{ photo.caption }}</p>
+              <p class="photo-caption-title">{{ photo.caption }} </p>
               <p class="photo-caption-year">{{ photo.year }}</p>
             </figcaption>
           </div>
@@ -46,7 +46,7 @@
     [attr.aria-label]="'Photos : ' + photos()[lightboxIndex()].caption"
     (click)="closeLightbox()" (keydown)="useArrow($event)">
 
-    <div class="lightbox-content" (click)="$event.stopPropagation()">
+    <div class="lightbox-content" (click)="$event.stopPropagation()" >
       <button #focusForKeydown class="lightbox-close" (click)="closeLightbox()" aria-label="Fermer la galerie">✕</button>
 
       <figure class="lightbox-figure">
