@@ -108,7 +108,7 @@ export class GalleryComponent {
     },
     {
       src: 'assets/images/1980_Imprimerie_zoom.jpg',
-      srcNotZoom: 'assets/images/1980_Imprimerie_zoom.jpg',
+      srcNotZoom: 'assets/images/1980_Imprimerie.jpg',
       alt: 'Claude Julien à l\'imprimerie du Monde',
       caption: 'Claude Julien à l\'imprimerie du <i>Monde</i>',
       year: '1980',
